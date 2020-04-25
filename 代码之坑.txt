@@ -1,0 +1,15 @@
+1.使用list的containsAll()问题
+例如A.containsAll(B)
+list<integer> A={0,1,2};
+list <Integer> B={0,0,0}；
+则A.containsAll(B)==true!!!!
+但B.containsAll(A)=false!!!
+原因对于A.containsAll(B)实质上是拿B里的每个元素跟A里contains，那么对于B中每个元素，A中都包含的，所以为true。
+同理，只要B中所有元素相同且与A中的任一个元素相同，则A.containsAll(B)==true
+原理：
+public boolean containsAll(Collection<?> c) {
+        for (Object e : c)
+            if (!contains(e))
+                return false;
+        return true;
+    }
