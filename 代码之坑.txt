@@ -13,5 +13,46 @@ public boolean containsAll(Collection<?> c) {
                 return false;
         return true;
     }
-    
+   
+   
+   
+   
     2
+HashMap和HashTable的区别
+
+主要的区别有：线程安全性，同步(synchronization)，以及速度。
+
+HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null(HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行)
+
+HashMap是非synchronized，而Hashtable是synchronized，这意味着Hashtable是线程安全的，多个线程可以共享一个Hashtable；而如果没有正确的同步的话，多个线程是不能共享HashMap的。
+
+另一个区别是HashMap的迭代器(Iterator)是fail-fast迭代器(如果在使用迭代器的过程中有其他线程修改了map，那么将抛出 ConcurrentModificationgException，这就是所谓 fail-fast 策略 )，而Hashtable的enumerator迭代器不是fail-fast的。所以当有其它线程改变了HashMap的结构（增加或者移除元素），将会抛出ConcurrentModificationException，但迭代器本身的remove()方法移除元素则不会抛出ConcurrentModificationException异常。
+
+由于Hashtable是线程安全的也是synchronized，所以在单线程环境下它比HashMap要慢。如果你不需要同步，只需要单一线程，那么使用HashMap性能要好过Hashtable
+
+HashMap不能保证随着时间的推移Map中的元素次序是不变的
+
+
+Java 5提供了ConcurrentHashMap，它是HashTable的替代，比HashTable的扩展性更好
+
+HashMap（不支持synchronized，是线程非安全的）-------->HashTable(线程安全的，可多线程共享一个HashTable)    --------> ConcurrentHashMap(HashTable的替代，比HashTable的扩展性更好)  )
+
+
+HashMap和HashSet的区别
+
+
+
+
+
+
+
+
+
+
+
+几种算法思想：
+1.二分查找
+2.动态规划
+3.中心扩散
+
+String字符串的startWith()方法：startsWith()方法用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 true 或 false如：str.startsWith(“abc”)
