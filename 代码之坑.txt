@@ -55,7 +55,7 @@ HashMap和HashSet的区别
 2.动态规划
 3.中心扩散
 
-String字符串的startWith()方法：startsWith()方法用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 true 或 false如：str.startsWith(“abc”)
+
 
 
 数组排序：
@@ -63,6 +63,8 @@ Arrays.sort(nums);
 
 
 字符串：
+String字符串的startWith()方法：startsWith()方法用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 true 或 false如：str.startsWith(“abc”)
+
 String类的substring()方法
 public String substring(int beginIndex)
 返回一个新字符串，它是此字符串的一个子字符串。该子字符串始于指定索引处的字符，一直到此字符串末尾。
