@@ -60,3 +60,17 @@ String字符串的startWith()方法：startsWith()方法用来判断当前字符
 
 数组排序：
 Arrays.sort(nums);
+
+
+字符串：
+String类的substring()方法
+public String substring(int beginIndex)
+返回一个新字符串，它是此字符串的一个子字符串。该子字符串始于指定索引处的字符，一直到此字符串末尾。
+参数：beginIndex - 开始处的索引（包括）
+例  ："unhappy".substring(2)   returns"happy"
+
+public String substring(int beginIndex, int endIndex)
+返回一个新字符串，它是此字符串的一个子字符串。该子字符串从指定的 beginIndex 处开始， endIndex:到指定的 endIndex-1处结束。
+参数：beginIndex - 开始处的索引（包括）
+    　　endindex 结尾处索引（不包括）。
+例："hamburger".substring(3,8)  returns "burge"
