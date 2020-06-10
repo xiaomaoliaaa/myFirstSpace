@@ -76,3 +76,11 @@ public String substring(int beginIndex, int endIndex)
 参数：beginIndex - 开始处的索引（包括）
     　　endindex 结尾处索引（不包括）。
 例："hamburger".substring(3,8)  returns "burge"
+
+
+数组动态扩容：
+System.arraycopy方法实现araycopy(Object src,int srcPos,Object dest,int destPos, int length)
+HashMap的方法：
+containsKey(Object key) 
+containsValue(Object Value) 
+
